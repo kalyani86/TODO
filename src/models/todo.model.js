@@ -6,7 +6,11 @@ const TodoSchema=new mongoose.Schema(
         {
             type:String,
             required:true,
-            unique:true
+        },
+        username:
+        {
+            type:String,
+            required:true
         },
         title:
         {
@@ -35,8 +39,8 @@ const TodoSchema=new mongoose.Schema(
         state:
         {
             type:String,
-            enum:["start","pending","complete"],
-            default:"start"
+            enum:["pending","completed","overdue"],
+            default:"pending"
         },
         status:
         [

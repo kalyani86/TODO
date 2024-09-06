@@ -31,7 +31,18 @@ const UserSchema=new mongoose.Schema(
             type:String,
             required:true,
             unique:true,
-        }
+        },
+        ProfilePhoto:
+        {
+            type:String,
+        },
+        todo:
+        [
+            {
+                type:mongoose.Schema.Types.ObjectId,
+                ref:"todo"
+            }
+        ]
     },
     {
         timestamps:true
